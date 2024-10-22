@@ -1,4 +1,4 @@
-# VSDSquadron-Research-Internship-2024
+# VSDSquadron-Research-Internship-20th October Cohert
 The program is based on the RISC-V architecture and uses open-source tools to teach people about VLSI chip design and RISC-V. The instructor for this internship is Kunal Ghosh Sir.
 # Lab exercises of RISCV workshop
 Instructor: Kunal Ghosh
