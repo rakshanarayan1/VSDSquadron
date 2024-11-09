@@ -1,18 +1,18 @@
 # VSDSquadron-Research-Internship-20th October Cohert
 The program is based on the RISC-V architecture and uses open-source tools to teach people about VLSI chip design and RISC-V. The instructor for this internship is Kunal Ghosh Sir.
-# Lab exercises of RISCV workshop
+## Lab exercises of RISCV workshop
 Instructor: Kunal Ghosh
 # Task1: Install RISC-V toolchain using VDI.Upload snapshot of compiled C code and RISC-V Objdmp on your GitHub repo
-# Description:
+## Description:
 The task included downloading a virtual manager and installing the RIS-V toolchain using VDI Write a C code for the sum to n numbers Compile the above code using gcc compiler Compile the above code using the RISC-V simulator
-# Installations:
+## Installations:
 Oracle Virtual machine
 ![Screenshot (13)](https://github.com/user-attachments/assets/c299495f-9744-41f2-91b6-8d3512e14daf)
 
 Gedit editor
 ![1](https://github.com/user-attachments/assets/b9ad2f47-889d-44d9-ace3-c87ff91274cc)
 
-# Steps:
+## Steps:
 1: Open Gedit and write the C code to find the sum of n numbers
 ![2](https://github.com/user-attachments/assets/b7dc646a-153b-4e4d-8ef0-0eae38c20426)
 
@@ -29,8 +29,11 @@ Gedit editor
 ![7](https://github.com/user-attachments/assets/55704bcb-b96e-4392-bb3a-380e46c25fed)
 
 # Task 2:
-# A.SPIKE simulation and observation with -O1 and -Ofast.upload snapshots of compiled C code,RISC-V Objdump
-# Steps:
+## A.SPIKE simulation and observation with -O1 and -Ofast.upload snapshots of compiled C code,RISC-V Objdump
+## What is SPIKE in RISC-V?
+A RISC-V ISA is a simulator, enabling the testing and analysis of RISC-V programs without the need for actual hardware.
+Spike is a free, open-source C++ simulator for the RISC-V ISA that models a RISC-V core and cache system. It can be used to run programs and a Linux kernel, and can be a starting point for running software on a RISC-V target
+## Steps:
 1.The C code is the same as above: 
 ![2](https://github.com/user-attachments/assets/61aa28ae-234f-4cc4-8fbd-7439060320c4)
 
@@ -41,8 +44,8 @@ Gedit editor
 ![9](https://github.com/user-attachments/assets/2be6b798-614b-433d-bd66-e9217f3b40cb)
 
 This method confirms all the three methods give the same output
-# B.Write a simple C program for any simple application and RISC-V GCC/SPIKE
-# Steps:
+## B.Write a simple C program for any simple application and RISC-V GCC/SPIKE
+## Steps:
 1.C code of calculator application
 ![10](https://github.com/user-attachments/assets/bd46bec1-e3ae-4a9a-9f50-a0aa21818ab7)
 
@@ -57,6 +60,242 @@ This method confirms all the three methods give the same output
 4.Compile it using SPIKE simulator
 ![14](https://github.com/user-attachments/assets/9699e44d-30e5-42aa-8c73-c7035c803c31)
 All three compilers/simulators produce the same output
+
+# TASK 3:-
+## RISC-V Instruction Types (R,I,S,B,U,J):
+The RISC-V instruction set architecture (ISA) defines several types of instructions, each with a specific format. Below is a summary of the main instruction types:
+![382201566-e9b6a795-6e82-4ea6-9feb-129a8dc1bc9b](https://github.com/user-attachments/assets/819cd11f-3ebe-4959-8890-9e546ed7e3cb)
+
+### 1.) R-Type (Register-Register):
+Purpose: Used for operations that involve two source registers and one destination register
+
+Fields:
+
+opcode: Operation code
+
+rd: Destination register
+
+func3: Function modifier
+
+rs1: Source register 1
+
+rs2: Source register 2
+
+func7: Function modifier (additional)
+
+Example: add x1, x2, x3
+
+### 2.) I-Type (Immediate):
+Purpose: Used for operations with one source register and an immediate value, including loads.
+
+Fields:
+
+opcode: Operation code
+
+rd: Destination register
+
+func3: Function modifier
+
+rs1: Source register
+
+imm[11:0]: Immediate value
+
+Example: addi x1, x2, 10
+
+### 3.) S-Type (Store):
+Purpose: Used for store instructions, which write a register's value to memory.
+
+Fields:
+
+opcode: Operation code
+
+imm[11:5]: Immediate value (upper 7 bits)
+
+func3: Function modifier
+
+rs1: Source register (base address)
+
+rs2: Source register (data to store)
+
+imm[4:0]: Immediate value (lower 5 bits)
+
+Example: sw x2, 0(x1)
+
+### 4.) B-Type (Branch):
+Purpose: Used for conditional branch instructions.
+
+Fields:
+
+opcode: Operation code
+
+imm[12]: Immediate value (bit 12)
+
+imm[10:5]: Immediate value (bits 10 to 5)
+
+func3: Function modifier
+
+rs1: Source register 1
+
+rs2: Source register 2
+
+imm[4:1]: Immediate value (bits 4 to 1)
+
+imm[11]: Immediate value (bit 11)
+
+Example: beq x1, x2, label
+
+### 5.) U-Type (Upper Immediate):
+Purpose: Used for instructions that operate with a large immediate value.
+
+Fields:
+
+opcode: Operation code
+
+rd: Destination register
+
+imm[31:12]: Immediate value
+
+Example: lui x1, 0x10000
+
+### 6.) J-Type (Jump):
+Purpose: Used for jump instructions with a large immediate value.
+
+Fields:
+
+opcode: Operation code
+
+rd: Destination register
+
+imm[20]: Immediate value (bit 20)
+
+imm[10:1]: Immediate value (bits 10 to 1)
+
+imm[11]: Immediate value (bit 11)
+
+imm[19:12]: Immediate value (bits 19 to 12)
+
+Example: jal x1, label
+
+# 32-bit Instruction Codes in RISC-V Instruction Type Format for 15 Unique Instructions:
+### 1.) addi x1, x2, 10
+
+Instruction Format: I-type
+
+Binary Encoding: 000000000010 00010 000 00001 0010011
+
+32-bit Instruction Code: 0x00210093
+
+### 2.) li x5, 0x0
+
+Instruction Format: I-type (using addi x5, x0, 0x0)
+
+Binary Encoding: 000000000000 00000 000 00101 0010011 
+
+32-bit Instruction Code: 0x00000293
+
+### 3.) lui x10, 0x20000
+
+Instruction Format: U-type
+
+Binary Encoding: 00100000000000000000 01010 0110111
+
+32-bit Instruction Code: 0x20000537
+
+### 4.) mv x1, x2
+
+Instruction Format: I-type (using addi x1, x2, 0)
+
+Binary Encoding: 000000000000 00010 000 00001 0010011
+
+32-bit Instruction Code: 0x00010093
+
+### 5.) sw x5, 0(x10)
+
+Instruction Format: S-type
+
+Binary Encoding: 0000000 00101 01010 010 00000 0100011
+
+32-bit Instruction Code: 0x0050a023
+
+### 6.) lw x5, 0(x10)
+
+Instruction Format: I-type
+
+Binary Encoding: 000000000000 01010 010 00101 0000011
+
+32-bit Instruction Code: 0x0000a283
+
+### 7.)jal x0, 0x100
+
+Instruction Format: J-type
+
+Binary Encoding: 00000000000100000000 00000 1101111
+
+32-bit Instruction Code: 0x0000086f
+
+### 8.) beq x1, x2, label
+
+Instruction Format: B-type (assuming offset is 0x4)
+
+Binary Encoding: 000000 00010 00001 000 00010 1100011
+
+32-bit Instruction Code: 0x00210063
+
+### 9.) bne x1, x3, label
+
+Instruction Format: B-type (assuming offset is 0x4)
+
+Binary Encoding: 000000 00011 00001 001 00010 1100011
+
+32-bit Instruction Code: 0x00310063
+
+### 10.) slli x5, x1, 1
+
+Instruction Format: I-type
+
+Binary Encoding: 0000000 00001 00101 001 00001 0010011
+
+32-bit Instruction Code: 0x00109093
+
+### 11.) srli x6, x2, 2
+
+Instruction Format: I-type
+
+Binary Encoding: 0000000 00010 00110 101 00010 0010011
+
+32-bit Instruction Code: 0x0022b093
+
+### 12.) and x3, x4, x5
+
+Instruction Format: R-type
+
+Binary Encoding: 0000000 00101 00100 111 00011 0110011
+
+32-bit Instruction Code: 0x005201b3
+
+### 13.) or x2, x3, x4
+
+Instruction Format: R-type
+
+Binary Encoding: 0000000 00100 00011 110 00010 0110011
+
+32-bit Instruction Code: 0x004181b3
+
+### 14.) sub x3, x5, x2
+
+Instruction Format: R-type
+
+Binary Encoding: 0100000 00010 00101 000 00011 0110011
+
+32-bit Instruction Code: 0x402282b3
+
+### 15.) xor x1, x2, x3
+
+Instruction Format: R-type
+
+Binary Encoding: 0000000 00011 00010 100 00001 0110011
+
+32-bit Instruction Code: 0x003100b3
 
 
 
