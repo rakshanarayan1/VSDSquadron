@@ -365,6 +365,37 @@ Select the instructions from EX_MEM_IR[31:0] to present the instructions used in
 
 To conclude : The output waveform for the list of instructions are obtained in GTKWAVE.
 
+# Task 5
+## Implementation of 2-bit Comparator using VSDSquadron Mini Board
+### Overview
+This project aims to design and implement a 2-bit comparator using the VSDSquadron Mini board. A 2-bit comparator is a digital circuit that compares two 2-bit binary numbers and indicates whether one number is greater than, less than, or equal to the other. The project involves designing the comparator logic using C programming in Visual Studio Code, setting up the hardware connections on a breadboard, and verifying the functionality through LEDs connected to the output.
+### Key Components
+- VSDSquadron Mini Board : The main microcontroller board used for processing and logic implementation.
+- Breadboard and Jumper Wires : For building and testing the circuit.
+- LEDs : To display the comparison results.This project requires 3 LEDs.
+- Resistors : To limit the current to the LEDs.220Ohm resistors are used in this project.
+
+### Pin configuration:
+![Screenshot (29)](https://github.com/user-attachments/assets/aaf7f7d2-2c55-47e6-a109-aef9122c775c)
+
+### Circuit diagram:
+![Screenshot (26)](https://github.com/user-attachments/assets/1f84b969-14f8-474d-923d-a7f0b315f5eb)
+
+### Functional Description
+- A > B: LED1 (Yellow color) lights up when a is greater than b.
+- A < B: LED2 (Red color) lights up when a is less than b.
+- A = B: LED3 (Green color) lights up when both numbers are equal.
+
+### Truth table
+![Screenshot (30)](https://github.com/user-attachments/assets/3f67abc2-60b3-4147-bd7a-f1148de1fda5)
+
+### Program
+
+
+
+
+
+
 
 
 
