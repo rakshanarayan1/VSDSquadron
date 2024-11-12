@@ -297,6 +297,77 @@ Binary Encoding: 0000000 00011 00010 100 00001 0110011
 
 32-bit Instruction Code: 0x003100b3
 
+# Task 4:
+## By making use of RISC-V Core: Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms
+NOTE: Since the designing of RISCV Architecture and writing it's testbench is not the part of this Research Internship, so we will use the Verilog Code and Testbench of RISCV that has already been designed. The reference GitHub repository is : iiitb_rv32i
+
+## Steps to perform functional simulation of RISCV
+GTKWAVE Generation Process
+Follow the steps below to generate the waveform using Verilog code and GTKWAVE.
+
+### Step 1: Clone the Repository
+Clone the RISC-V Verilog repository using the git clone command.
+
+git clone https://github.com/vinayrayapati/rv321
+### Step 2: Navigate to the Cloned Directory
+Change the directory to the cloned repository.
+
+cd rv321
+### Step 3: Compile the Verilog Code and Testbench
+Run the following iverilog command to compile the Verilog code and testbench.
+
+iverilog -o iiitb_rv32i iiitb_rv32i.v iiitb_rv32i_tb.v
+### Step 4: Simulate the Verilog Code
+After compiling, simulate the Verilog code by running the compiled file:
+
+./iiitb_rv321
+![15](https://github.com/user-attachments/assets/0bcf9bd9-d934-49d6-9e8b-2093bdcc581c)
+
+
+### Step 5: Open the Waveform in GTKWAVE
+Once the simulation generates the .vcd (Value Change Dump) file, you can visualize the waveform in GTKWAVE.
+
+gtkwave iiitb_rv321.vcd
+It will open the new window of GTKWAVE
+
+![gtkwave 1](https://github.com/user-attachments/assets/f4f16095-9277-4fc4-9590-8fee9c7133fb)
+
+Tap the iiitb_rv32i_tb in the SST section
+
+![gtkwave 2](https://github.com/user-attachments/assets/5c0260f4-560a-4ce4-bcd3-882f70881986)
+
+Now, drag the command in the same way presented under time section.
+
+![gtkwave 4](https://github.com/user-attachments/assets/4a3c0a80-1e8e-4278-a301-0184db58dfdc)
+
+Select the instructions from EX_MEM_IR[31:0] to present the instructions used in Task 3 and Analysing the Output Waveform of various instructions that we have covered in TASK-3.
+
+#### Instruction ADD r1, r2, r3 :
+![ADD r1,r2,r3](https://github.com/user-attachments/assets/b353af89-7f46-4156-a106-51fe62643b0b)
+
+#### Instruction SUB r3, r1, r2 :
+![SUB r3, r1, r2](https://github.com/user-attachments/assets/baef2e50-a17e-4f1c-a9d9-252daf8a880e)
+
+#### Instruction AND r2, r1, r3 :
+![AND r2, r1, r3](https://github.com/user-attachments/assets/e999ab06-c4a5-4d58-ae4e-55cecd94094f)
+
+#### Instruction OR r8, r2, r5 :
+![OR r8, r2, r5](https://github.com/user-attachments/assets/571f5828-2e9a-40ad-b987-576bebb946e9)
+
+#### Instruction XOR r8, r1, r4 :
+![XOR r8, r1, r4](https://github.com/user-attachments/assets/7e25aded-599b-4563-90fe-c57c4c9955da)
+
+#### Instruction SLL r15, r11, r2 :
+![SLL r15, r11, r2](https://github.com/user-attachments/assets/43d56b5d-4a3f-40da-a87d-620f67e9a3ad)
+
+#### Instruction SLT r10, r2, r4 :
+![SLT r10, r2, r4](https://github.com/user-attachments/assets/e56c855a-7a6d-4673-9e7b-7213047743f5)
+
+To conclude : The output waveform for the list of instructions are obtained in GTKWAVE.
+
+
+
+
 
 
 
