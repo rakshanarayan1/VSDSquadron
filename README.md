@@ -366,30 +366,37 @@ Select the instructions from EX_MEM_IR[31:0] to present the instructions used in
 To conclude : The output waveform for the list of instructions are obtained in GTKWAVE.
 
 # Task 5
-## Implementation of 2-bit Comparator using VSDSquadron Mini Board
-### Overview
-This project aims to design and implement a 2-bit comparator using the VSDSquadron Mini board. A 2-bit comparator is a digital circuit that compares two 2-bit binary numbers and indicates whether one number is greater than, less than, or equal to the other. The project involves designing the comparator logic using C programming in Visual Studio Code, setting up the hardware connections on a breadboard, and verifying the functionality through LEDs connected to the output.
-### Key Components
-- VSDSquadron Mini Board : The main microcontroller board used for processing and logic implementation.
-- Breadboard and Jumper Wires : For building and testing the circuit.
-- LEDs : To display the comparison results.This project requires 3 LEDs.
-- Resistors : To limit the current to the LEDs.220Ohm resistors are used in this project.
+## Implementation of Bluetooth automated smart access
+### Introduction
+Technology's seamless integration into our lives has turned smart homes from a vision into reality. Central to this is the “Bluetooth Automated Smart Access” system, combining convenience, security, and innovation. Using a VSD Squadron Mini board, Bluetooth module, and servo motor, this system simplifies interactions with our living spaces.
 
-### Pin configuration:
-![Screenshot (29)](https://github.com/user-attachments/assets/aaf7f7d2-2c55-47e6-a109-aef9122c775c)
+Unlike traditional manual methods that are cumbersome, this technology allows users to control devices via smartphone, reducing physical interaction. Applications include managing water taps, lighting, appliances, smart doors, and security systems, making daily tasks more efficient and streamlined.
 
-### Circuit diagram:
-![Screenshot (26)](https://github.com/user-attachments/assets/1f84b969-14f8-474d-923d-a7f0b315f5eb)
+### Overview:
+This project introduces an innovative door access control system using a servo motor, Bluetooth module, push-button, and onboard LED. The system operates by triggering the servo motor to open or close upon receiving a Bluetooth command. The VSD Squadron Mini activates the motor, enabling a hands-free, user-friendly, and secure access mechanism.
 
-### Functional Description
-- A > B: LED1 (Yellow color) lights up when a is greater than b.
-- A < B: LED2 (Red color) lights up when a is less than b.
-- A = B: LED3 (Green color) lights up when both numbers are equal.
+Key Components:
 
-### Truth table
-![Screenshot (30)](https://github.com/user-attachments/assets/3f67abc2-60b3-4147-bd7a-f1148de1fda5)
+- Servo Motor (Pin PC6): Functions as the lock, controlled by the microcontroller.
+- Bluetooth Module (Pins PD6, PD7, PC7, GND, 3.3V): Facilitates wireless communication for remote control; the State pin shows connection status.
+- Onboard LED (LED_BUILTIN): Indicates locked/unlocked status for visual feedback.
+Users can control the system via smartphone, with the LED enhancing user experience and reliability. This project highlights a practical IoT solution for home security and automation.
 
-### Program
+### Components Required with description:
+
+- VSD Squadron Mini – 1 (Microcontroller board)
+- Servo Motor (e.g., SG90) – 1 (Standard servo motor)
+- Bluetooth HC-05 Module – 1 (Bluetooth module for serial communication)
+- Jumper Wires – 1 set (Male-to-male and female-to-male jumper wires)
+- Micro USB Cable – 1 (For programming and power supply)
+
+### Pin connections:
+![Screenshot (35)](https://github.com/user-attachments/assets/cbdf1986-9744-40b7-bd71-54a015bb756e)
+
+### Pinout diagram:
+![Screenshot (34)](https://github.com/user-attachments/assets/1c612304-84f4-41b4-8681-de451e95a52d)
+
+### Code:
 
 
 
