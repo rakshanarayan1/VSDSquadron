@@ -396,6 +396,8 @@ Users can control the system via smartphone, with the LED enhancing user experie
 ### Pinout diagram:
 ![Screenshot (34)](https://github.com/user-attachments/assets/1c612304-84f4-41b4-8681-de451e95a52d)
 
+# Task 6:
+## Upload Final working code and short video of the application
 ### Code snippet:
 ![0](https://github.com/user-attachments/assets/c40fc101-276b-4f16-84d6-000cdaa5ffbb)
 
@@ -404,6 +406,15 @@ Users can control the system via smartphone, with the LED enhancing user experie
 ![0](https://github.com/user-attachments/assets/5892fc21-ed82-40d3-abbb-f74e69fc7cf3)
 
 ![0](https://github.com/user-attachments/assets/616686a5-f338-494f-bda4-3362eb3e92be)
+
+### Video of application
+
+https://drive.google.com/file/d/14g22PP3OMmG3PyxGwPjVweHNmK0l3Yt9/view?usp=drive_link
+
+### Acknowledgement 
+
+I would like to express my gratitude to Kunal Ghosh Sir for giving me the opportunity to delve into the RISCV Architecture through this internship with VSDSquadron Mini. This experience has not only been an inspiring introduction to the field but has also sparked my curiosity and significantly enhanced my technical skills. I would also like to extend my heartfelt thanks to VLSI System Design for providing such a meaningful and enriching learning experience that has greatly contributed to my personal and professional development.
+
 
 
 
