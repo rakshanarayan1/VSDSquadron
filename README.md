@@ -396,7 +396,16 @@ Users can control the system via smartphone, with the LED enhancing user experie
 ### Pinout diagram:
 ![Screenshot (34)](https://github.com/user-attachments/assets/1c612304-84f4-41b4-8681-de451e95a52d)
 
-### Code:
+### Code snippet:
+![0](https://github.com/user-attachments/assets/c40fc101-276b-4f16-84d6-000cdaa5ffbb)
+
+![0](https://github.com/user-attachments/assets/340a816d-ba0d-4136-9831-ab56f64339a3)
+
+![0](https://github.com/user-attachments/assets/5892fc21-ed82-40d3-abbb-f74e69fc7cf3)
+
+![0](https://github.com/user-attachments/assets/616686a5-f338-494f-bda4-3362eb3e92be)
+
+
 
 
 
