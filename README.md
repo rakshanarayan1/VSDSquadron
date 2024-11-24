@@ -398,6 +398,7 @@ Users can control the system via smartphone, with the LED enhancing user experie
 
 # Task 6:
 ## Upload Final working code and short video of the application
+![b1b20500-ea72-4f9f-843c-dac73885b54d](https://github.com/user-attachments/assets/4236d967-936c-42e9-bdfe-4c61d328a777)
 
 ### Code snippet:
 ![Screenshot (37)](https://github.com/user-attachments/assets/1f7f027d-70a3-4389-a62b-02af6b979641)
@@ -408,9 +409,7 @@ Users can control the system via smartphone, with the LED enhancing user experie
 
 ![Screenshot (40)](https://github.com/user-attachments/assets/b89da470-c2b2-4e13-b88f-e98a2c710fbb)
 ### Video of application
-
-
-
+https://drive.google.com/file/d/1TWU79wtkEyibGWW5e826OM0X0Uz0dz69/view?usp=sharing
 
 ### Acknowledgement 
 
